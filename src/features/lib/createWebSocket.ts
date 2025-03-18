@@ -27,8 +27,7 @@ const createWebSocketConnection = (
     }
   };
 
-  ws.onerror = (error) => {
-;
+  ws.onerror = () => {;
     onError();
   };
 
@@ -58,7 +57,7 @@ export const createWebSocket = (tickers: string[], dispatch: AppDispatch) => {
       () => {
         setTimeout(() => {
           connect();
-        }, 5 * 1000);
+        }, 3 * 1000);
       }
     );
   };

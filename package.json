@@ -1,5 +1,6 @@
 {
   "name": "portfolio-overview",
+  "homepage": "https://github.com/qwesmayn/portfolio-overview/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
@@ -21,6 +24,7 @@
     "axios": "^1.8.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.482.0",
     "path": "^0.12.7",
     "react": "^19.0.0",
